@@ -3,6 +3,7 @@
     ob-prolog
     (ob-ccalc :location local)
     (ob-clingo :location local)
+    proof-general
     )
 )
 
@@ -33,3 +34,10 @@
     )
   )
 
+(defun jg-logic-layer/init-proof-general ()
+  (use-package proof-general
+    :init
+    (push 'coq-mode jg-spacemacs-main-layer/major-modes)
+    :config
+    )
+  )
